@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow">
+<link rel="icon" type="image/png" href="/assets/reppochat_logo.png">
+<title>kukuDev — アプリ一覧</title>
+<meta name="description" content="kukuDevが作るアプリ。小さくても確かなアプリを作っています。">
+<meta property="og:title" content="kukuDev — アプリ一覧">
+<meta property="og:description" content="kukuDevが作るアプリ。小さくても確かなアプリを作っています。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://kukudev.com/ja/">
+<link rel="alternate" hreflang="ko" href="https://kukudev.com/">
+<link rel="alternate" hreflang="en" href="https://kukudev.com/en/">
+<link rel="alternate" hreflang="ja" href="https://kukudev.com/ja/">
+<link rel="alternate" hreflang="x-default" href="https://kukudev.com/">
+<link rel="canonical" href="https://kukudev.com/ja/">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://fonts.googleapis.com; script-src 'self' https://code.iconify.design; font-src 'self' https://cdn.jsdelivr.net https://fonts.gstatic.com; img-src 'self' data: https://api.iconify.design; connect-src https://api.iconify.design; frame-ancestors 'none';">
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" rel="stylesheet" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+<script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js" crossorigin="anonymous"></script>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#0B1020;--bg2:#0E1530;--surface:rgba(255,255,255,.04);--hairline:rgba(255,255,255,.1);--ink:#F4F6FB;--ink-muted:#A7B0C6;--ink-subtle:#6B7488;--font-pre:'Pretendard Variable','Pretendard','Noto Sans JP',-apple-system,BlinkMacSystemFont,sans-serif}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:var(--font-pre);line-height:1.7;-webkit-font-smoothing:antialiased;min-height:100vh}
+a{color:inherit;text-decoration:none}img{max-width:100%;display:block}
+.wrap{max-width:1080px;margin:0 auto;padding:0 28px}
+.nav{display:flex;align-items:center;justify-content:space-between;height:74px}
+.brand{font-size:22px;font-weight:800;letter-spacing:-0.5px}.brand b{color:#7aa2ff}
+.lang-toggle{display:flex;align-items:center;gap:2px;font-size:13px}
+.lang-toggle a,.lang-toggle span.active{padding:5px 9px;border-radius:7px}
+.lang-toggle a{color:var(--ink-subtle)}.lang-toggle a:hover{color:var(--ink);background:rgba(255,255,255,.06)}
+.lang-toggle .active{color:var(--ink);font-weight:700}.lang-sep{color:rgba(255,255,255,.16);font-size:11px}
+.hero{position:relative;overflow:hidden;padding:80px 0 48px}
+.hero::before{content:'';position:absolute;top:-180px;left:50%;transform:translateX(-50%);width:900px;height:560px;background:radial-gradient(circle,rgba(58,134,255,.18) 0%,transparent 60%);pointer-events:none}
+.hero::after{content:'';position:absolute;top:-120px;right:-80px;width:520px;height:520px;background:radial-gradient(circle,rgba(5,166,107,.16) 0%,transparent 65%);pointer-events:none}
+.hero-inner{position:relative;z-index:1;text-align:center;max-width:680px;margin:0 auto}
+.kicker{display:inline-flex;align-items:center;gap:7px;font-size:12px;font-weight:800;letter-spacing:1.6px;text-transform:uppercase;color:#7aa2ff;background:rgba(122,162,255,.1);border:1px solid rgba(122,162,255,.2);padding:6px 14px;border-radius:9999px;margin-bottom:22px}
+.hero h1{font-size:52px;font-weight:800;letter-spacing:-1.6px;line-height:1.12;margin-bottom:18px}
+.hero p{font-size:18px;color:var(--ink-muted);line-height:1.7}
+.section-label{font-size:12px;font-weight:800;letter-spacing:2px;color:var(--ink-subtle);text-align:center;margin:28px 0 22px}
+.cards{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;padding-bottom:90px}
+.card{background:var(--surface);border:1px solid var(--hairline);border-radius:22px;padding:30px;display:flex;flex-direction:column;transition:transform .35s cubic-bezier(.16,1,.3,1),border-color .3s,box-shadow .3s;position:relative;overflow:hidden}
+.card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--accent);opacity:.85}
+.card:hover{transform:translateY(-6px);border-color:color-mix(in srgb,var(--accent) 45%,transparent);box-shadow:0 24px 50px rgba(0,0,0,.4)}
+.card-top{display:flex;align-items:center;gap:16px;margin-bottom:18px}
+.card-logo{width:60px;height:60px;border-radius:16px;overflow:hidden;flex:0 0 auto;background:rgba(255,255,255,.06);border:1px solid var(--hairline);display:flex;align-items:center;justify-content:center}
+.card-logo img{width:100%;height:100%;object-fit:cover}
+.card-name{font-size:22px;font-weight:800;letter-spacing:-0.4px}
+.card-tag{font-size:13px;font-weight:700;color:var(--accent);margin-top:2px}
+.card-desc{font-size:15px;color:var(--ink-muted);line-height:1.8;margin-bottom:24px;flex:1}
+.card-actions{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.btn-primary{display:inline-flex;align-items:center;gap:7px;background:var(--accent);color:#fff;font-size:14px;font-weight:700;padding:11px 18px;border-radius:10px;transition:opacity .2s,transform .2s}
+.btn-primary:hover{opacity:.92;transform:translateY(-1px)}
+.btn-ghost{display:inline-flex;align-items:center;gap:7px;color:var(--ink-muted);font-size:14px;font-weight:600;padding:11px 14px;border-radius:10px;border:1px solid var(--hairline);transition:color .2s,border-color .2s}
+.btn-ghost:hover{color:var(--ink);border-color:rgba(255,255,255,.24)}
+.footer{border-top:1px solid var(--hairline);padding:36px 0 56px}
+.footer-biz{font-size:12px;color:var(--ink-subtle);line-height:2;margin-bottom:12px}
+.footer-copy{font-size:12px;color:var(--ink-subtle)}
+@media (max-width:768px){
+  .hero{padding:56px 0 36px}.hero h1{font-size:36px;letter-spacing:-1px}.hero p{font-size:16px}
+  .cards{grid-template-columns:1fr;gap:16px;padding-bottom:64px}.card{padding:26px}
+}
+</style>
+</head>
+<body>
+<header class="wrap"><nav class="nav">
+  <a href="/ja/" class="brand">kuku<b>Dev</b></a>
+  <div class="lang-toggle"><a href="/">한국어</a><span class="lang-sep">|</span><a href="/en/">English</a><span class="lang-sep">|</span><span class="active">日本語</span></div>
+</nav></header>
+
+<section class="hero"><div class="wrap"><div class="hero-inner">
+  <span class="kicker"><iconify-icon icon="solar:widget-5-bold"></iconify-icon> kukuDev</span>
+  <h1>私たちが作ったアプリ</h1>
+  <p>小さくても確かなアプリを作っています。気に入るアプリに出会えますように。</p>
+</div></div></section>
+
+<main class="wrap">
+  <div class="section-label">APPS</div>
+  <div class="cards">
+      <article class="card" style="--accent:#3A86FF">
+        <div class="card-top">
+          <div class="card-logo"><img src="/assets/codicheck_logo.png" alt="CodiCheck logo"></div>
+          <div><div class="card-name">CodiCheck</div><div class="card-tag">AIコーデ評価</div></div>
+        </div>
+        <p class="card-desc">AIの幼なじみセアが、TPOに基づいてあなたのコーデを率直に評価します。おすすめのショッピングリンクやAI修正コーデまで。</p>
+        <div class="card-actions">
+          <a class="btn-primary" href="https://codicheck.kukudev.com/ja/">詳しく見る<iconify-icon icon="solar:arrow-right-linear" style="font-size:16px"></iconify-icon></a>
+          <a class="btn-ghost" href="https://play.google.com/store/apps/details?id=com.kukuDev.nerdescape" target="_blank" rel="noopener" aria-label="Google Play"><iconify-icon icon="mdi:google-play" style="font-size:18px"></iconify-icon> Google Play</a>
+        </div>
+      </article>
+      <article class="card" style="--accent:#05A66B">
+        <div class="card-top">
+          <div class="card-logo"><img src="/assets/reppochat_logo.png" alt="ReppoChat logo"></div>
+          <div><div class="card-name">ReppoChat</div><div class="card-tag">オフラインAIチャット</div></div>
+        </div>
+        <p class="card-desc">会話はすべて端末内に。自分だけのキャラクターを作って、インターネットなしで会話できるオフラインAIフレンドです。</p>
+        <div class="card-actions">
+          <a class="btn-primary" href="https://reppochat.kukudev.com/ja/">詳しく見る<iconify-icon icon="solar:arrow-right-linear" style="font-size:16px"></iconify-icon></a>
+          <a class="btn-ghost" href="https://play.google.com/store/apps/details?id=com.kukuDev.reppochat" target="_blank" rel="noopener" aria-label="Google Play"><iconify-icon icon="mdi:google-play" style="font-size:18px"></iconify-icon> Google Play</a>
+        </div>
+      </article></div>
+</main>
+
+<footer class="footer"><div class="wrap">
+  <div class="footer-biz">kukuDev（ククデブ） &nbsp;|&nbsp; 代表者: O Jaeseok &nbsp;|&nbsp; 事業者登録番号: 390-68-00863<br>通信販売業届出番号: 2026-Incheon Yeonsu-gu-1196<br>住所: 大韓民国 仁川広域市 延寿区 龍潭路111, 6階 6649号<br>メール: <span id="ce"></span></div>
+  <p class="footer-copy">© 2026 kukuDev. All rights reserved.</p>
+</div></footer>
+<script>(function(){var u='\x73\x75\x70\x70\x6f\x72\x74',d='\x6b\x75\x6b\x75\x64\x65\x76\x2e\x63\x6f\x6d';var el=document.getElementById('ce');if(el)el.textContent=u+'\x40'+d;})();</script>
+</body>
+</html>
