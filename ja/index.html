@@ -54,8 +54,8 @@ a{color:inherit;text-decoration:none}
 
 /* works */
 .works{padding:0 0 32px;border-top:1px solid var(--line)}
-.work{display:grid;grid-template-columns:64px 1fr;gap:24px;align-items:start;
-  padding:40px 6px;border-bottom:1px solid var(--line-2);transition:background .35s ease}
+.work{display:grid;grid-template-columns:64px 1fr auto;gap:28px;align-items:center;
+  padding:36px 6px;border-bottom:1px solid var(--line-2);transition:background .35s ease}
 .work:hover{background:var(--hover)}
 .work-icon{width:64px;height:64px;border-radius:16px;overflow:hidden;background:#fff;flex:0 0 auto;
   box-shadow:0 1px 0 rgba(255,255,255,.06),0 8px 24px rgba(0,0,0,.35)}
@@ -64,7 +64,8 @@ a{color:inherit;text-decoration:none}
 .work:hover .work-name{color:#fff}
 .work-cat{margin-top:7px;font-size:14px;color:var(--ink-3)}
 .work-desc{margin-top:15px;font-size:15px;line-height:1.85;color:var(--ink-2);max-width:54ch}
-.work-actions{margin-top:22px;display:flex;flex-wrap:wrap;gap:11px}
+.work-actions{display:flex;flex-direction:column;gap:10px;align-self:center;min-width:162px}
+.work-actions .btn{justify-content:center}
 .btn{display:inline-flex;align-items:center;gap:8px;height:48px;padding:0 22px;border-radius:12px;
   font-size:15px;font-weight:600;letter-spacing:-.01em;transition:background .25s,border-color .25s,transform .2s}
 .btn:active{transform:scale(.98)}
@@ -98,6 +99,7 @@ a{color:inherit;text-decoration:none}
   .hero-img{aspect-ratio:16/10}
   .work{grid-template-columns:1fr;gap:16px;padding:32px 2px}
   .work-icon{width:56px;height:56px}
+  .work-actions{flex-direction:row;flex-wrap:wrap;min-width:0;margin-top:4px}
   .btn{flex:1;justify-content:center;min-width:140px}
 }
 </style>
@@ -127,10 +129,10 @@ a{color:inherit;text-decoration:none}
         <a class="work-name" href="https://reppochat.kukudev.com/ja/">ReppoChat</a>
         <div class="work-cat">オフラインAIキャラクターチャット</div>
         <p class="work-desc">インターネットなしで端末内で動くAIキャラクターチャット。性格や口調まで作り込んだキャラクターと、会話を外に出さないまま記憶を重ねて続けられます。</p>
-        <div class="work-actions">
-          <a class="btn btn-line" href="https://reppochat.kukudev.com/ja/">詳しく<iconify-icon icon="solar:arrow-right-linear"></iconify-icon></a>
-          <a class="btn btn-play" href="https://play.google.com/store/apps/details?id=com.kukuDev.reppochat" target="_blank" rel="noopener"><iconify-icon icon="logos:google-play-icon"></iconify-icon>Google Play</a>
-        </div>
+      </div>
+      <div class="work-actions">
+        <a class="btn btn-line" href="https://reppochat.kukudev.com/ja/">詳しく<iconify-icon icon="solar:arrow-right-linear"></iconify-icon></a>
+        <a class="btn btn-play" href="https://play.google.com/store/apps/details?id=com.kukuDev.reppochat" target="_blank" rel="noopener"><iconify-icon icon="logos:google-play-icon"></iconify-icon>Google Play</a>
       </div>
     </div>
     <div class="work" data-r>
@@ -139,10 +141,10 @@ a{color:inherit;text-decoration:none}
         <a class="work-name" href="https://codicheck.kukudev.com/ja/">CodiCheck</a>
         <div class="work-cat">AIコーデ評価</div>
         <p class="work-desc">写真を1枚撮るだけで、AIが今日のコーデを評価。TPOに合わせたスコアと率直なフィードバック、似合うアイテムの提案までまとめて受け取れます。</p>
-        <div class="work-actions">
-          <a class="btn btn-line" href="https://codicheck.kukudev.com/ja/">詳しく<iconify-icon icon="solar:arrow-right-linear"></iconify-icon></a>
-          <a class="btn btn-play" href="https://play.google.com/store/apps/details?id=com.kukuDev.nerdescape" target="_blank" rel="noopener"><iconify-icon icon="logos:google-play-icon"></iconify-icon>Google Play</a>
-        </div>
+      </div>
+      <div class="work-actions">
+        <a class="btn btn-line" href="https://codicheck.kukudev.com/ja/">詳しく<iconify-icon icon="solar:arrow-right-linear"></iconify-icon></a>
+        <a class="btn btn-play" href="https://play.google.com/store/apps/details?id=com.kukuDev.nerdescape" target="_blank" rel="noopener"><iconify-icon icon="logos:google-play-icon"></iconify-icon>Google Play</a>
       </div>
     </div>
   </section>
