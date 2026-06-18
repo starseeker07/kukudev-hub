@@ -5,10 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="index, follow">
 <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
-<title>kukuDev — App Studio</title>
-<meta name="description" content="Apps by kukuDev. We take small ideas and polish them into apps worth keeping.">
-<meta property="og:title" content="kukuDev — App Studio">
-<meta property="og:description" content="Apps by kukuDev. We take small ideas and polish them into apps worth keeping.">
+<title>kukuDev — Apps</title>
+<meta name="description" content="Apps by kukuDev. We polish small ideas into apps worth keeping.">
+<meta property="og:title" content="kukuDev — Apps">
+<meta property="og:description" content="Apps by kukuDev. We polish small ideas into apps worth keeping.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://kukudev.com/en/">
 <link rel="alternate" hreflang="ko" href="https://kukudev.com/">
@@ -18,86 +18,83 @@
 <link rel="canonical" href="https://kukudev.com/en/">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://fonts.googleapis.com; script-src 'self' 'unsafe-inline' https://code.iconify.design; font-src 'self' https://cdn.jsdelivr.net https://fonts.gstatic.com; img-src 'self' data: https://api.iconify.design; connect-src https://api.iconify.design; frame-ancestors 'none';">
 <link rel="preconnect" href="https://cdn.jsdelivr.net">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <script src="https://code.iconify.design/iconify-icon/2.3.0/iconify-icon.min.js"></script>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
-  --bg:#0b0a09;            /* warm near-black */
-  --ink:#ECE8E1;          /* warm off-white */
-  --ink-2:#A39E95;        /* muted warm grey */
-  --ink-3:#6B665E;        /* faint */
-  --line:rgba(236,232,225,.12);
-  --line-2:rgba(236,232,225,.07);
-  --hover:rgba(236,232,225,.025);
-  --font-ko:'Pretendard','Pretendard Variable',-apple-system,BlinkMacSystemFont,system-ui,sans-serif;
-  --font-en:'Space Grotesk',var(--font-ko);
+  --bg:#0b0a09; --ink:#ECE8E1; --ink-2:#A39E95; --ink-3:#6B665E;
+  --line:rgba(236,232,225,.12); --line-2:rgba(236,232,225,.07);
+  --hover:rgba(236,232,225,.025); --btn:rgba(236,232,225,.06);
+  --font:'Pretendard','Pretendard Variable',-apple-system,BlinkMacSystemFont,system-ui,sans-serif;
 }
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-body{background:var(--bg);color:var(--ink);font-family:var(--font-ko);line-height:1.7;-webkit-font-smoothing:antialiased;word-break:keep-all;overflow-x:hidden}
+body{background:var(--bg);color:var(--ink);font-family:var(--font);line-height:1.7;-webkit-font-smoothing:antialiased;word-break:keep-all;overflow-x:hidden}
 a{color:inherit;text-decoration:none}
-/* 그레인 텍스처 — 비디지털 질감 */
-.grain{position:fixed;inset:0;z-index:60;pointer-events:none;opacity:.045;mix-blend-mode:overlay;
+.grain{position:fixed;inset:0;z-index:60;pointer-events:none;opacity:.04;mix-blend-mode:overlay;
   background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
 .wrap{max-width:1000px;margin:0 auto;padding:0 28px}
 
-/* nav */
-.nav{display:flex;align-items:baseline;justify-content:space-between;padding:30px 0 0}
-.brand{font-family:var(--font-en);font-size:19px;font-weight:600;letter-spacing:-.02em;color:var(--ink)}
+/* nav — 워드마크 크게 */
+.nav{display:flex;align-items:center;justify-content:space-between;padding:32px 0 0}
+.brand{font-size:27px;font-weight:800;letter-spacing:-.03em;color:var(--ink)}
 .brand .x{color:var(--ink-3)}
-.langs{display:flex;gap:14px;font-family:var(--font-en);font-size:12px;letter-spacing:.08em}
+.langs{display:flex;gap:16px;font-size:14px;font-weight:600}
 .langs a{color:var(--ink-3);transition:color .25s}.langs a:hover{color:var(--ink)}
 .langs .on{color:var(--ink)}
 
-/* hero — 좌측 정렬 에디토리얼, 넉넉한 여백 */
-.hero{padding:120px 0 96px;max-width:760px}
-.kicker{font-family:var(--font-en);font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--ink-2);margin-bottom:30px;display:flex;align-items:center;gap:12px}
-.kicker::before{content:"";width:26px;height:1px;background:var(--ink-3)}
-.hero h1{font-size:clamp(38px,6.2vw,68px);font-weight:700;line-height:1.16;letter-spacing:-.02em;color:var(--ink)}
-.hero .intro{margin-top:30px;font-size:clamp(16px,2vw,18px);line-height:1.85;color:var(--ink-2);max-width:48ch}
+/* hero — 좌측 정렬, 일관된 스케일 */
+.hero{padding:104px 0 92px;max-width:720px}
+.hero h1{font-size:46px;font-weight:800;line-height:1.2;letter-spacing:-.025em;color:var(--ink)}
+.hero .intro{margin-top:26px;font-size:17px;font-weight:400;line-height:1.85;color:var(--ink-2);max-width:50ch}
 
-/* works index */
-.works{padding:8px 0 40px}
-.works-label{font-family:var(--font-en);font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-3);padding-bottom:18px;border-bottom:1px solid var(--line);margin-bottom:0}
-.work{display:grid;grid-template-columns:64px 1fr auto;gap:8px 22px;align-items:start;
-  padding:38px 8px;border-bottom:1px solid var(--line-2);transition:background .35s ease;position:relative}
+/* works */
+.works{padding:0 0 32px}
+.works-label{font-size:13px;font-weight:700;letter-spacing:.04em;color:var(--ink-3);padding-bottom:20px;border-bottom:1px solid var(--line)}
+.work{display:grid;grid-template-columns:64px 1fr;gap:24px;align-items:start;
+  padding:40px 6px;border-bottom:1px solid var(--line-2);transition:background .35s ease}
 .work:hover{background:var(--hover)}
-.work-no{font-family:var(--font-en);font-size:14px;color:var(--ink-3);padding-top:9px;letter-spacing:.02em}
-.work-name{display:inline-flex;align-items:center;gap:13px;font-size:clamp(26px,3.6vw,38px);font-weight:600;letter-spacing:-.02em;color:var(--ink);line-height:1.1;transition:opacity .25s}
-.work-name .dot{width:9px;height:9px;border-radius:50%;flex:0 0 auto;background:var(--d)}
-.work:hover .work-name{opacity:.62}
-.work-cat{margin-top:12px;font-size:14px;color:var(--ink-2);letter-spacing:.01em}
-.work-desc{margin-top:14px;font-size:15px;line-height:1.8;color:var(--ink-2);max-width:42ch}
-.work-links{margin-top:18px;display:flex;align-items:center;gap:16px;font-family:var(--font-en);font-size:13px}
-.work-links a{display:inline-flex;align-items:center;gap:6px;color:var(--ink-2);transition:color .25s}
-.work-links a:hover{color:var(--ink)}
-.work-links .sep{color:var(--ink-3)}
-.work-go{align-self:center;color:var(--ink-3);transition:transform .35s cubic-bezier(.16,1,.3,1),color .25s;font-size:22px;padding-top:2px}
-.work:hover .work-go{transform:translate(6px,-6px);color:var(--ink)}
+.work-icon{width:64px;height:64px;border-radius:16px;overflow:hidden;background:#fff;flex:0 0 auto;
+  box-shadow:0 1px 0 rgba(255,255,255,.06),0 8px 24px rgba(0,0,0,.35)}
+.work-icon img{width:100%;height:100%;object-fit:cover;display:block}
+.work-name{font-size:24px;font-weight:700;letter-spacing:-.02em;color:var(--ink);line-height:1.2;transition:color .25s}
+.work:hover .work-name{color:#fff}
+.work-cat{margin-top:7px;font-size:14px;color:var(--ink-3)}
+.work-desc{margin-top:15px;font-size:15px;line-height:1.85;color:var(--ink-2);max-width:54ch}
+.work-actions{margin-top:22px;display:flex;flex-wrap:wrap;gap:11px}
+.btn{display:inline-flex;align-items:center;gap:8px;height:48px;padding:0 22px;border-radius:12px;
+  font-size:15px;font-weight:600;letter-spacing:-.01em;transition:background .25s,border-color .25s,transform .2s}
+.btn:active{transform:scale(.98)}
+.btn-line{border:1px solid var(--line);color:var(--ink)}
+.btn-line:hover{border-color:rgba(236,232,225,.34);background:var(--hover)}
+.btn-line iconify-icon{font-size:17px;color:var(--ink-2);transition:transform .3s cubic-bezier(.16,1,.3,1)}
+.btn-line:hover iconify-icon{transform:translateX(3px);color:var(--ink)}
+.btn-play{background:var(--btn);border:1px solid var(--line);color:var(--ink)}
+.btn-play:hover{background:rgba(236,232,225,.1)}
+.btn-play iconify-icon{font-size:19px}
 
 /* footer */
-.footer{padding:80px 0 64px;border-top:1px solid var(--line);margin-top:40px}
+.footer{padding:76px 0 60px;border-top:1px solid var(--line);margin-top:36px}
 .footer-row{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap}
-.footer .mark{font-family:var(--font-en);font-size:16px;font-weight:600;letter-spacing:-.02em}
-.footer .contact{font-family:var(--font-en);font-size:13px;color:var(--ink-2)}
+.footer .mark{font-size:18px;font-weight:800;letter-spacing:-.03em}
+.footer .contact{font-size:14px;font-weight:600;color:var(--ink-2)}
 .footer .contact:hover{color:var(--ink)}
-.footer .biz{margin-top:26px;font-size:12px;line-height:2;color:var(--ink-3)}
-.footer .copy{margin-top:14px;font-family:var(--font-en);font-size:12px;color:var(--ink-3);letter-spacing:.02em}
+.footer .biz{margin-top:24px;font-size:12.5px;line-height:2;color:var(--ink-3)}
+.footer .copy{margin-top:14px;font-size:12px;color:var(--ink-3)}
 
-/* reveal */
 [data-r]{opacity:0;transform:translateY(20px);transition:opacity .7s cubic-bezier(.16,1,.3,1),transform .7s cubic-bezier(.16,1,.3,1)}
 [data-r].in{opacity:1;transform:none}
 
 @media (max-width:640px){
-  .hero{padding:80px 0 64px}
-  .work{grid-template-columns:1fr;gap:0;padding:30px 4px}
-  .work-no{display:none}
-  .work-go{display:none}
-  .work-name{font-size:26px}
+  .nav{padding:24px 0 0}
+  .brand{font-size:24px}
+  .hero{padding:64px 0 56px}
+  .hero h1{font-size:34px}
+  .hero .intro{font-size:16px}
+  .work{grid-template-columns:1fr;gap:16px;padding:32px 2px}
+  .work-icon{width:56px;height:56px}
+  .btn{flex:1;justify-content:center;min-width:140px}
 }
 </style>
 </head>
@@ -105,45 +102,40 @@ a{color:inherit;text-decoration:none}
 <div class="grain"></div>
 <header class="wrap"><nav class="nav">
   <a href="/en/" class="brand">kuku<span class="x">Dev</span></a>
-  <div class="langs"><a href="/">KO</a><a class="on" href="/en/">EN</a><a href="/ja/">JA</a></div>
+  <div class="langs"><a href="/">한국어</a><a class="on" href="/en/">English</a><a href="/ja/">日本語</a></div>
 </nav></header>
 
 <main class="wrap">
   <section class="hero">
-    <div class="kicker" data-r>Independent app studio</div>
-    <h1 data-r style="transition-delay:.05s">We build apps<br>worth keeping</h1>
-    <p class="intro" data-r style="transition-delay:.12s">kukuDev is a one-person studio. We take small ideas and polish them, end to end, into apps you reach for every day.</p>
+    <h1 data-r>We build apps<br>worth keeping</h1>
+    <p class="intro" data-r style="transition-delay:.08s">kukuDev makes apps that stay on your home screen. We polish every idea, end to end, into a tool you reach for every day.</p>
   </section>
 
   <section class="works">
     <div class="works-label" data-r>What we made</div>
-    <div class="work" data-r style="--d:#05A66B">
-      <div class="work-no">01</div>
+    <div class="work" data-r>
+      <div class="work-icon"><img src="/assets/reppochat_logo.png" alt="ReppoChat 아이콘" loading="lazy"></div>
       <div class="work-body">
-        <a class="work-name" href="https://reppochat.kukudev.com/en/"><span class="dot"></span>ReppoChat</a>
+        <a class="work-name" href="https://reppochat.kukudev.com/en/">ReppoChat</a>
         <div class="work-cat">Offline AI character chat</div>
-        <p class="work-desc">Your chats stay on your phone. Talk with your own characters, no internet needed.</p>
-        <div class="work-links">
-          <a href="https://reppochat.kukudev.com/en/">View<iconify-icon icon="solar:arrow-right-up-linear"></iconify-icon></a>
-          <span class="sep">·</span>
-          <a href="https://play.google.com/store/apps/details?id=com.kukuDev.reppochat" target="_blank" rel="noopener"><iconify-icon icon="mdi:google-play" style="font-size:14px"></iconify-icon> Google Play</a>
+        <p class="work-desc">AI character chat that runs on your phone, no internet needed. Build characters with their own personality and keep chatting while memories grow — and nothing leaves your device.</p>
+        <div class="work-actions">
+          <a class="btn btn-line" href="https://reppochat.kukudev.com/en/">View<iconify-icon icon="solar:arrow-right-linear"></iconify-icon></a>
+          <a class="btn btn-play" href="https://play.google.com/store/apps/details?id=com.kukuDev.reppochat" target="_blank" rel="noopener"><iconify-icon icon="logos:google-play-icon"></iconify-icon>Google Play</a>
         </div>
       </div>
-      <a class="work-go" href="https://reppochat.kukudev.com/en/" aria-hidden="true" tabindex="-1"><iconify-icon icon="solar:arrow-right-up-linear"></iconify-icon></a>
     </div>
-    <div class="work" data-r style="--d:#3A86FF">
-      <div class="work-no">02</div>
+    <div class="work" data-r>
+      <div class="work-icon"><img src="/assets/codicheck_logo.png" alt="CodiCheck 아이콘" loading="lazy"></div>
       <div class="work-body">
-        <a class="work-name" href="https://codicheck.kukudev.com/en/"><span class="dot"></span>CodiCheck</a>
+        <a class="work-name" href="https://codicheck.kukudev.com/en/">CodiCheck</a>
         <div class="work-cat">AI outfit feedback</div>
-        <p class="work-desc">An honest word on what you are wearing, rated for time, place, and occasion.</p>
-        <div class="work-links">
-          <a href="https://codicheck.kukudev.com/en/">View<iconify-icon icon="solar:arrow-right-up-linear"></iconify-icon></a>
-          <span class="sep">·</span>
-          <a href="https://play.google.com/store/apps/details?id=com.kukuDev.nerdescape" target="_blank" rel="noopener"><iconify-icon icon="mdi:google-play" style="font-size:14px"></iconify-icon> Google Play</a>
+        <p class="work-desc">Snap one photo and AI rates your look. Get a score tuned to the time, place, and occasion, honest feedback, and matching item picks — all at once.</p>
+        <div class="work-actions">
+          <a class="btn btn-line" href="https://codicheck.kukudev.com/en/">View<iconify-icon icon="solar:arrow-right-linear"></iconify-icon></a>
+          <a class="btn btn-play" href="https://play.google.com/store/apps/details?id=com.kukuDev.nerdescape" target="_blank" rel="noopener"><iconify-icon icon="logos:google-play-icon"></iconify-icon>Google Play</a>
         </div>
       </div>
-      <a class="work-go" href="https://codicheck.kukudev.com/en/" aria-hidden="true" tabindex="-1"><iconify-icon icon="solar:arrow-right-up-linear"></iconify-icon></a>
     </div>
   </section>
 </main>
